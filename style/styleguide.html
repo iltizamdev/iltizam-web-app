@@ -1,0 +1,1582 @@
+<!DOCTYPE html><!--  Last Published: Mon Apr 15 2024 15:52:03 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65c001884a24cfd131379dbb" data-wf-site="6582aea2e6ccef4fb05de960" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Styleguide</title>
+  <meta content="Styleguide" property="og:title">
+  <meta content="Styleguide" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/components.css" rel="stylesheet" type="text/css">
+  <link href="../css/iltizamrelief.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.svg" rel="apple-touch-icon">
+  <script>
+const token = localStorage.getItem('token');
+const currentPath = window.location.pathname;
+if (!token && currentPath.startsWith('/users')) {
+  window.location.replace("/");
+}
+</script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="global-style_wrap">
+      <div class="global-style w-embed">
+        <style>
+/* fs extension generated fluid responsive calcs. */
+html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+/* End fs extension generated */
+/* Snippet gets rid of top margin on first element in any rich text*/
+.w-richtext>:first-child {
+	margin-top: 0;
+}
+/* Snippet gets rid of bottom margin on last element in any rich text*/
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0;
+}
+/* Snippet makes all link elements listed below to inherit color from their parent */
+a, 
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link
+{
+color: inherit;
+}
+/* Snippet prevents all click and hover interaction with an element */
+.clickable-off {
+  pointer-events: none;
+}
+/* Snippet enables all click and hover interaction with an element */
+.clickable-on{
+  pointer-events: auto;
+}
+/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+.div-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+/*Hide focus outline for main content element*/
+    main:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/* Make sure containers never lose their center alignment*/
+.container-medium, .container-small, .container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+/*Reset selects, buttons, and links styles*/
+.w-input, .w-select, a {
+color: inherit;
+text-decoration: inherit;
+font-size: inherit;
+}
+/*Apply "..." after 3 lines of text */
+.text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.articles_title-link:link {
+	text-decoration:none;
+ }
+ .button:link {
+	text-decoration:none;
+ }
+ .button-small:link {
+	text-decoration:none;
+ }
+ .nav-link:link {
+	text-decoration:none;
+ }
+.breadcrumb-link:link {
+	text-decoration:none;
+ }
+ .footer8_link:link {
+	text-decoration:none;
+ }
+  .text-size-small:link {
+	text-decoration:none;
+ }
+  .text-color-roblue:link {
+	text-decoration:underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-color:#e21a6b;
+ }
+  .text-size-small:link {
+	text-decoration:underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-color:inherit;
+ }
+*::selection {
+  background: #000;
+  color: #fff;
+}
+a.text-style-link.w--current:link {
+	text-decoration-color:#00aeef;
+}
+</style>
+      </div>
+      <div class="padding-global-style w-embed">
+        <style>
+/* tablet */
+@media screen and (max-width: 991px)	{
+	body {
+  	--page-padding--main: var(--page-padding--main-tablet)
+  }
+}
+/*landscape*/
+@media screen and (max-width: 767px)	{
+	body {
+  	--page-padding--main: var(--page-padding--mobile-landscape)
+  }
+}
+/*portrait*/
+@media screen and (max-width: 479px)	{
+	body {
+  	--page-padding--main: var(--page-padding--mobile-portrait)
+  }
+}
+</style>
+      </div>
+      <div class="form-embed w-embed">
+        <style>
+.popup-input_field-wrapper {
+  position: relative;
+}
+.popup-input_label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--size--small);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+.popup-input_label.phone {
+  left: 5.5rem;
+}
+.popup-input_field:not(:placeholder-shown) + .popup-input_label,
+.popup-input_field:focus + .popup-input_label {
+	top: var(--size--custom5);
+  font-size: var(--body--xsmall);
+  font-weight: 400;
+  color: var(--text-color--light-5);
+}
+.popup-input_field.cta:not(:placeholder-shown) + .popup-input_label.is-xsmall,
+.popup-input_field.cta:focus + .popup-input_label.is-xsmall {
+	top: var(--size--custom3);
+  font-size: var(--body--tiny);
+  font-weight: 400;
+  color: var(--text-color--light-5);
+}
+#valid-msg {
+color: #10B981;
+}
+#error-msg {
+color: #F43F5E;
+}
+input[type="radio"]:checked + label.form-radio .form-radio-icon.w--redirected-checked {
+ border-color: #2FC28B;
+}
+.intl-tel-input,
+.iti {
+width: 100%;
+}
+</style>
+      </div>
+      <div class="slider-style w-embed">
+        <style>
+.w-slider-dot {
+  background-color: var(--color-grey--base);
+  width: var(--size--custom3);
+  height: var(--size--custom3);
+  border-radius: var(--radius--lg);
+}
+.w-slider-dot.w-active {
+  background-color: var(--color-primary--dark-1);
+  width: var(--size--medium);
+  height: var(--size--custom3);
+}
+</style>
+      </div>
+    </div>
+    <div class="main-wrapper">
+      <div class="page-padding">
+        <div class="container-large">
+          <div class="rl-styleguide_elements">
+            <div class="rl-styleguide_header">
+              <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04d9c-31379dbb">
+                <div class="margin-bottom margin-small"><img src="../images/nav-logo2x.webp" loading="lazy" width="169" alt=""></div>
+                <h1 class="heading-xsmall">Iltizam</h1>
+                <div>Version 1.0</div>
+              </div>
+              <div class="rl-styleguide_button-row">
+                <a href="#" target="_blank" class="w-inline-block">
+                  <div>Open Site</div>
+                  <div class="icon-embed-xsmall w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 15.8333V11.25C17.5 11.0199 17.3135 10.8333 17.0833 10.8333H16.25C16.0199 10.8333 15.8333 11.0199 15.8333 11.25V15.8333H4.16667V4.16667H8.75C8.98012 4.16667 9.16667 3.98012 9.16667 3.75V2.91667C9.16667 2.68655 8.98012 2.5 8.75 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333ZM17.0917 2.69167L17.3167 2.91667V2.90833C17.4299 3.02132 17.4955 3.17342 17.5 3.33333V8.75C17.5 8.98012 17.3135 9.16667 17.0833 9.16667H16.25C16.0199 9.16667 15.8333 8.98012 15.8333 8.75V5.35L8.8 12.375C8.72176 12.4539 8.61527 12.4982 8.50417 12.4982C8.39307 12.4982 8.28657 12.4539 8.20833 12.375L7.625 11.7917C7.54612 11.7134 7.50175 11.6069 7.50175 11.4958C7.50175 11.3847 7.54612 11.2782 7.625 11.2L14.6583 4.16667H11.25C11.0199 4.16667 10.8333 3.98012 10.8333 3.75V2.91667C10.8333 2.68655 11.0199 2.5 11.25 2.5H16.6667C16.8278 2.50668 16.98 2.57535 17.0917 2.69167Z" fill="currentColor"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+            <div class="rl-styleguide_wrapper">
+              <div class="rl-styleguide_heading">Typography</div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">HTML Headings<br></div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04daf-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04db0-31379dbb" class="rl-styleguide_class-label html-tags">All H1 Headings</div>
+                  <h1>Heading 1</h1>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04db4-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04db5-31379dbb" class="rl-styleguide_class-label html-tags">All H2 Headings</div>
+                  <h2>Heading 2</h2>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04db9-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dba-31379dbb" class="rl-styleguide_class-label html-tags">All H3 Headings</div>
+                  <h3>Heading 3</h3>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dbe-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dbf-31379dbb" class="rl-styleguide_class-label html-tags">All H4 Headings</div>
+                  <h4 id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dc1-31379dbb">Heading 4</h4>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dc3-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dc4-31379dbb" class="rl-styleguide_class-label html-tags">All H5 Headings</div>
+                  <h5>Heading 5</h5>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dc8-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dc9-31379dbb" class="rl-styleguide_class-label html-tags">All H6 Headings</div>
+                  <h6>Heading 6</h6>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Heading Classes</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dd0-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dd1-31379dbb" class="rl-styleguide_class-label">heading-xxlarge</div>
+                  <h1 class="heading-xxlarge">Display</h1>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dd5-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dd6-31379dbb" class="rl-styleguide_class-label">heading-xlarge</div>
+                  <h2 class="heading-xlarge">H1</h2>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dda-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ddb-31379dbb" class="rl-styleguide_class-label">heading-large</div>
+                  <h2 class="heading-large">H2</h2>
+                </div>
+                <div id="w-node-fd882c93-6860-74db-3dc0-f7070f85c95b-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-fd882c93-6860-74db-3dc0-f7070f85c95c-31379dbb" class="rl-styleguide_class-label">heading-semilarge</div>
+                  <h2 class="heading-semilarge">H2</h2>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ddf-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04de0-31379dbb" class="rl-styleguide_class-label">heading-medium</div>
+                  <h3 class="heading-medium">H3</h3>
+                </div>
+                <div id="w-node-a0a134a6-37d3-0884-16e2-6e12bf01c205-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-a0a134a6-37d3-0884-16e2-6e12bf01c206-31379dbb" class="rl-styleguide_class-label">heading-semimedium</div>
+                  <h3 class="heading-semimedium">H3</h3>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04de4-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04de5-31379dbb" class="rl-styleguide_class-label">heading-small</div>
+                  <h4 class="heading-small">H4</h4>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04de9-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dea-31379dbb" class="rl-styleguide_class-label">heading-xsmall</div>
+                  <h5 class="heading-xsmall">H5</h5>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dee-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04def-31379dbb" class="rl-styleguide_class-label">heading-xxsmall</div>
+                  <h6 class="heading-xxsmall">H6</h6>
+                </div>
+                <div id="w-node-_21ff2913-d12d-c554-8302-587fc90f4a19-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_21ff2913-d12d-c554-8302-587fc90f4a1a-31379dbb" class="rl-styleguide_class-label">heading-tiny</div>
+                  <h6 class="heading-tiny">H6</h6>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Other HTML Tags</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04df6-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04df7-31379dbb" class="rl-styleguide_class-label html-tags">All Paragraphs</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dfb-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04dfc-31379dbb" class="rl-styleguide_class-label html-tags">All Links</div>
+                  <a href="#">All Links</a>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e00-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e01-31379dbb" class="rl-styleguide_class-label html-tags">All Block Quotes</div>
+                  <blockquote>Block Quote</blockquote>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e05-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e06-31379dbb" class="rl-styleguide_class-label html-tags">All Unordered Lists</div>
+                  <ul role="list" class="w-list-unstyled">
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                  </ul>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e0f-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e10-31379dbb" class="rl-styleguide_class-label html-tags">All Unordered Lists</div>
+                  <ul role="list">
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                  </ul>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e19-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e1a-31379dbb" class="rl-styleguide_class-label html-tags">All Ordered Lists</div>
+                  <ol role="list">
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                    <li>
+                      <p>No bullet list</p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Sizes</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e29-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e2a-31379dbb" class="rl-styleguide_class-label">text-size-xlarge</div>
+                  <p class="text-size-xlarge">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e2e-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e2f-31379dbb" class="rl-styleguide_class-label">text-size-large</div>
+                  <p class="text-size-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e33-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e34-31379dbb" class="rl-styleguide_class-label">text-size-medium</div>
+                  <p class="text-size-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e38-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e39-31379dbb" class="rl-styleguide_class-label">text-size-regular</div>
+                  <p class="text-size-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e3d-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e3e-31379dbb" class="rl-styleguide_class-label">text-size-small</div>
+                  <p class="text-size-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e42-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e43-31379dbb" class="rl-styleguide_class-label">text-size-xsmall</div>
+                  <p class="text-size-xsmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+                <div id="w-node-_561d48fa-72e1-dc42-c68d-ba94fa4ef78c-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_561d48fa-72e1-dc42-c68d-ba94fa4ef78d-31379dbb" class="rl-styleguide_class-label">text-size-tiny</div>
+                  <p class="text-size-tiny">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Weights</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e4a-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e4b-31379dbb" class="rl-styleguide_class-label">text-weight-xbold</div>
+                  <div class="text-weight-xbold">text-weight-xbold (800)</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e4f-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e50-31379dbb" class="rl-styleguide_class-label">text-weight-bold</div>
+                  <div class="text-weight-bold">text-weight-bold (700)</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e54-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e55-31379dbb" class="rl-styleguide_class-label">text-weight-semibold</div>
+                  <div class="text-weight-semibold">text-weight-large (600)</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e59-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e5a-31379dbb" class="rl-styleguide_class-label">text-weight-medium</div>
+                  <div class="text-weight-medium">text-weight-medium (500)</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e5e-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e5f-31379dbb" class="rl-styleguide_class-label">text-weight-normal</div>
+                  <div class="text-weight-normal">text-weight-normal (400)</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e63-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e64-31379dbb" class="rl-styleguide_class-label">text-weight-light</div>
+                  <div class="text-weight-light">text-weight-light (300)</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Letter Spacings</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e6b-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e6c-31379dbb" class="rl-styleguide_class-label">text-letterspacing-xwide</div>
+                  <div class="text-letterspacing-xwide">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e70-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e71-31379dbb" class="rl-styleguide_class-label">text-letterspacing-wide</div>
+                  <div class="text-letterspacing-wide">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e75-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e76-31379dbb" class="rl-styleguide_class-label">text-letterspacing-normal</div>
+                  <div class="text-letterspacing-normal">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e7a-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e7b-31379dbb" class="rl-styleguide_class-label">text-letterspacing-tight</div>
+                  <div class="text-letterspacing-tight">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e7f-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e80-31379dbb" class="rl-styleguide_class-label">text-letterspacing-xtight</div>
+                  <div class="text-letterspacing-xtight">A Lorem ipsum dolor sit amet</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Line Heights</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e87-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e88-31379dbb" class="rl-styleguide_class-label">text-lineheight-xtall</div>
+                  <div class="text-lineheight-xtall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e8c-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e8d-31379dbb" class="rl-styleguide_class-label">text-lineheight-tall</div>
+                  <div class="text-lineheight-tall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e91-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e92-31379dbb" class="rl-styleguide_class-label">text-lineheight-normal</div>
+                  <div class="text-lineheight-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e96-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e97-31379dbb" class="rl-styleguide_class-label">text-lineheight-short</div>
+                  <div class="text-lineheight-short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e9b-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04e9c-31379dbb" class="rl-styleguide_class-label">text-lineheight-xshort</div>
+                  <div class="text-lineheight-xshort">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ea0-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ea1-31379dbb" class="rl-styleguide_class-label">text-lineheight-none</div>
+                  <div class="text-lineheight-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Styles</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ea8-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ea9-31379dbb" class="rl-styleguide_class-label">text-style-italic</div>
+                  <div class="text-style-italic">text-style-italic</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ead-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eae-31379dbb" class="rl-styleguide_class-label">text-style-strikethrough</div>
+                  <div class="text-style-strikethrough">text-style-strikethrough</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eb2-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eb3-31379dbb" class="rl-styleguide_class-label">text-style-allcaps</div>
+                  <div class="text-style-allcaps">text-style-allcaps</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eb7-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eb8-31379dbb" class="rl-styleguide_class-label">text-style-nowrap</div>
+                  <div class="text-style-nowrap">text-style-nowrap</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ebc-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ebd-31379dbb" class="rl-styleguide_class-label">text-style-quotesmall</div>
+                  <div class="text-style-quotesmall">&quot;We elevate height safety — by being across every detail early, and being accountable through all stages and complexities&quot;.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ec1-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ec2-31379dbb" class="rl-styleguide_class-label">text-style-quotelarge</div>
+                  <div class="text-style-quotelarge">&quot;We elevate height safety — by being across every detail early, and being accountable through all stages and complexities&quot;.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ec6-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ec7-31379dbb" class="rl-styleguide_class-label">text-style-link</div>
+                  <div class="text-style-link">text-style-link</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ecb-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ecc-31379dbb" class="rl-styleguide_class-label">text-style-2lines</div>
+                  <div class="text-style-2lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ed0-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ed1-31379dbb" class="rl-styleguide_class-label">text-style-3lines</div>
+                  <div class="text-style-3lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ed5-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ed6-31379dbb" class="rl-styleguide_class-label">text-style-muted</div>
+                  <div class="text-style-muted">text-style-muted</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Alignment</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04edd-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ede-31379dbb" class="rl-styleguide_class-label">text-align-left</div>
+                  <div class="text-align-left">text-align-left</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ee2-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ee3-31379dbb" class="rl-styleguide_class-label">text-align-center</div>
+                  <div class="text-align-center">text-align-center</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ee7-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ee8-31379dbb" class="rl-styleguide_class-label">text-align-right</div>
+                  <div class="text-align-right">text-align-right</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Rich Text</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04eef-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04ef0-31379dbb" class="rl-styleguide_class-label">text-rich</div>
+                  <div id="w-node-a2e9d8fe-986f-c1aa-cc28-9b5c83eb52c8-31379dbb" class="text-rich w-richtext">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    <blockquote>Block quote</blockquote>
+                    <p>Ordered list</p>
+                    <ol role="list">
+                      <li>Item 1</li>
+                      <li>Item 2</li>
+                      <li>Item 3</li>
+                    </ol>
+                    <p>Unordered list</p>
+                    <ul role="list">
+                      <li>Item A</li>
+                      <li>Item B</li>
+                      <li>Item C</li>
+                    </ul>
+                    <p>
+                      <a href="https://university.webflow.com/lesson/add-and-nest-text-links-in-webflow">Text link</a>
+                    </p>
+                    <p><strong>Bold text</strong></p>
+                    <p><em>Emphasis</em></p>
+                    <p><sup>Superscript</sup></p>
+                    <p><sub>Subscript</sub></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rl-styleguide_wrapper">
+              <div class="rl-styleguide_heading">Colors</div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Brand<span class="text-size-small"></span></div>
+                <div class="w-layout-grid styleguide_grid-colours">
+                  <div class="styleguide_color-sample is-brand-darkest">
+                    <div class="text-color-white">Brand/Base</div>
+                  </div>
+                  <div class="styleguide_color-sample is-brand-blue">
+                    <div>Brand/Main</div>
+                  </div>
+                  <div class="styleguide_color-sample is-brand-bluelight">
+                    <div>Brand/Light</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Neutral<br></div>
+                <div class="w-layout-grid styleguide_grid-colours">
+                  <div class="styleguide_color-sample is-neutral-700">
+                    <div class="text-color-white">Neutral 700</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-500">
+                    <div class="text-color-white">Neutral 500</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-400">
+                    <div class="text-color-white">Neutral 400</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-300">
+                    <div>Neutral 300</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-200">
+                    <div>Neutral 200</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-100">
+                    <div>Neutral 100</div>
+                  </div>
+                  <div class="styleguide_color-sample is-neutral-50">
+                    <div>Neutral 50</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Background Color</div>
+                <div class="w-layout-grid styleguide_grid-colours">
+                  <div class="background-color-black">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-black</div>
+                    </div>
+                  </div>
+                  <div class="background-color-darkbrand">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-darkbrand</div>
+                    </div>
+                  </div>
+                  <div class="background-color-brand">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-brand</div>
+                    </div>
+                  </div>
+                  <div class="background-color-bluelight">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-bluelight</div>
+                    </div>
+                  </div>
+                  <div class="background-color-light">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-light</div>
+                    </div>
+                  </div>
+                  <div class="background-color-ultralight">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-light</div>
+                    </div>
+                  </div>
+                  <div class="background-color-white">
+                    <div class="padding-medium">
+                      <div class="rl-styleguide_class-label">background-color-white</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Colors</div>
+                <div id="w-node-_7c5d2cc0-1b9c-e9bd-67c4-b142d7a1ddad-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_7c5d2cc0-1b9c-e9bd-67c4-b142d7a1ddae-31379dbb" class="rl-styleguide_class-label">text-color-black</div>
+                  <div class="text-color-black">text-color-black</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f56-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f57-31379dbb" class="rl-styleguide_class-label">text-color-main</div>
+                  <div class="text-color-main">text-color-main</div>
+                </div>
+                <div id="w-node-_59d812e3-e088-7031-0c9d-3ea29689ea8b-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_59d812e3-e088-7031-0c9d-3ea29689ea8c-31379dbb" class="rl-styleguide_class-label">text-color-secondary</div>
+                  <div class="text-color-secondary">text-color-secondary</div>
+                </div>
+                <div id="w-node-_656deb4b-c009-fc37-8c61-27fde714b7a9-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_656deb4b-c009-fc37-8c61-27fde714b7aa-31379dbb" class="rl-styleguide_class-label">text-color-light2</div>
+                  <div>
+                    <div class="text-color-light2">text-color-light2</div>
+                  </div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f61-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f62-31379dbb" class="rl-styleguide_class-label">text-color-light3</div>
+                  <div>
+                    <div class="text-color-light3">text-color-light3</div>
+                  </div>
+                </div>
+                <div id="w-node-c0fc61e4-a85c-e9eb-ece1-9333938c46fb-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c0fc61e4-a85c-e9eb-ece1-9333938c46fc-31379dbb" class="rl-styleguide_class-label">text-color-light4</div>
+                  <div>
+                    <div class="text-color-light4">text-color-light4</div>
+                  </div>
+                </div>
+                <div id="w-node-_2f560e7b-86fb-a0bd-605c-cce813b2da24-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-_2f560e7b-86fb-a0bd-605c-cce813b2da25-31379dbb" class="rl-styleguide_class-label">text-color-light5</div>
+                  <div>
+                    <div class="text-color-light5">text-color-light5</div>
+                  </div>
+                </div>
+                <div id="w-node-b23378b0-8997-7674-cd2b-e0814c55d1c5-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-b23378b0-8997-7674-cd2b-e0814c55d1c6-31379dbb" class="rl-styleguide_class-label">text-color-light6</div>
+                  <div>
+                    <div class="text-color-light6">text-color-light6</div>
+                  </div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f5b-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f5c-31379dbb" class="rl-styleguide_class-label">text-color-white</div>
+                  <div class="background-color-black">
+                    <div class="text-color-white">text-color-white</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rl-styleguide_wrapper">
+              <div class="rl-styleguide_heading">Effects</div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Box Shadows<br>‍<span class="text-size-small">Shadows allow you to add depth and realism to designs by positioning elements on a z-axis.</span></div>
+                <div class="w-layout-grid rl-styleguide_shadows-list">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f84-31379dbb" class="shadow-xxsmall">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f85-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xxsmall</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f88-31379dbb" class="shadow-xsmall">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f89-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xsmall</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f8c-31379dbb" class="shadow-small">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f8d-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-small</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f90-31379dbb" class="shadow-medium">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f91-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-medium</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f94-31379dbb" class="shadow-large">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f95-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-large</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f98-31379dbb" class="shadow-xlarge">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f99-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xlarge</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f9c-31379dbb" class="shadow-xxlarge">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa04f9d-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xxlarge</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rl-styleguide_wrapper">
+              <div class="rl-styleguide_heading">UI Elements</div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Icons (Image)</div>
+                <div class="styleguide_icons-list">
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-xxsmall</p>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-xxsmall">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-xsmall</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-xsmall">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-small</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-small">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-medium</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-medium">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-large</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-large">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-xlarge</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-xlarge">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-custom</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-custom">
+                  </div>
+                </div>
+                <div class="styleguide_icons-list">
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-xxsmall</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-xxsmall">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-xsmall</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-xsmall">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-small</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-small">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-medium</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-medium">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-large</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-large">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-xlarge</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-xlarge">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="margin-bottom margin-tiny">
+                        <p class="rl-styleguide_class-label">icon-1x1-custom</p>
+                      </div>
+                    </div><img src="https://uploads-ssl.webflow.com/62b00e3cb91b817f7dafa5b7/62b00e3db91b811dc5afa5f9_icon.svg" loading="lazy" alt="" class="icon-1x1-custom">
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Icons (HTML Embed)<br><span class="text-size-small">HTML embed icons enable you to control icon color on hover.</span><br></div>
+                <div class="styleguide_icons-list">
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xxsmall</p>
+                    </div>
+                    <div class="icon-embed-xxsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xsmall</p>
+                    </div>
+                    <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-small</p>
+                    </div>
+                    <div class="icon-embed-small w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-medium</p>
+                    </div>
+                    <div class="icon-embed-medium w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-large</p>
+                    </div>
+                    <div class="icon-embed-large w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xlarge</p>
+                    </div>
+                    <div class="icon-embed-xlarge w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-custom</p>
+                    </div>
+                    <div class="icon-embed-custom w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Images</div>
+                <div class="w-layout-grid stylesystem-images_layout">
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-1x1</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-1x1"></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-4x3</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-4x3"></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-4x3 is-portrait</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-4x3 is-portrait"></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-3x2</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-3x2"></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-3x2 is-portrait</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-3x2 is-portrait"></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-small">
+                      <p class="rl-styleguide_class-label">image-ratio-16x9</p>
+                    </div>
+                    <div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-ratio-16x9"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rl-styleguide_classes">
+            <div class="stylesystem_structures">
+              <div class="page-wrapper"></div>
+              <div class="page-padding"></div>
+              <div class="main-wrapper"></div>
+            </div>
+            <div class="stylesystem_containers">
+              <div class="container-large"></div>
+              <div class="container-medium"></div>
+              <div class="container-small"></div>
+            </div>
+            <div class="stylesystem_max-widths">
+              <div class="max-width-full"></div>
+              <div class="max-width-full-tablet"></div>
+              <div class="max-width-full-mobile-landscape"></div>
+              <div class="max-width-full-mobile-portrait"></div>
+              <div class="max-width-xxlarge"></div>
+              <div class="max-width-xlarge"></div>
+              <div class="max-width-large"></div>
+              <div class="max-width-medium"></div>
+              <div class="max-width-small"></div>
+              <div class="max-width-xsmall"></div>
+              <div class="max-width-xxsmall"></div>
+            </div>
+            <div class="stylesystem_margins">
+              <div class="margin-0"></div>
+              <div class="margin-tiny"></div>
+              <div class="margin-xxsmall"></div>
+              <div class="margin-xsmall"></div>
+              <div class="margin-small"></div>
+              <div class="margin-medium"></div>
+              <div class="margin-large"></div>
+              <div class="margin-xlarge"></div>
+              <div class="margin-xxlarge"></div>
+              <div class="margin-huge"></div>
+              <div class="margin-xhuge"></div>
+              <div class="margin-xxhuge"></div>
+              <div class="margin-custom1"></div>
+              <div class="margin-custom2"></div>
+              <div class="margin-custom3"></div>
+            </div>
+            <div class="stylesystem_paddings">
+              <div class="padding-0"></div>
+              <div class="padding-tiny"></div>
+              <div class="padding-xxsmall"></div>
+              <div class="padding-xsmall"></div>
+              <div class="padding-small"></div>
+              <div class="padding-medium"></div>
+              <div class="padding-large"></div>
+              <div class="padding-xlarge"></div>
+              <div class="padding-xxlarge"></div>
+              <div class="padding-huge"></div>
+              <div class="padding-xhuge"></div>
+              <div class="padding-xxhuge"></div>
+              <div class="padding-custom1"></div>
+              <div class="padding-custom2"></div>
+              <div class="padding-custom3"></div>
+            </div>
+            <div class="stylesystem_margin-directions">
+              <div class="stylesystem_margin-top">
+                <div class="margin-top"></div>
+                <div class="margin-top margin-0"></div>
+                <div class="margin-top margin-tiny"></div>
+                <div class="margin-top margin-xxsmall"></div>
+                <div class="margin-top margin-xsmall"></div>
+                <div class="margin-top margin-small"></div>
+                <div class="margin-top margin-medium"></div>
+                <div class="margin-top margin-large"></div>
+                <div class="margin-top margin-xlarge"></div>
+                <div class="margin-top margin-xxlarge"></div>
+                <div class="margin-top margin-huge"></div>
+                <div class="margin-top margin-xhuge"></div>
+                <div class="margin-top margin-xxhuge"></div>
+                <div class="margin-top margin-custom1"></div>
+                <div class="margin-top margin-custom2"></div>
+                <div class="margin-top margin-custom3"></div>
+              </div>
+              <div class="stylesystem_margin-bottom">
+                <div class="margin-bottom"></div>
+                <div class="margin-bottom margin-0"></div>
+                <div class="margin-bottom margin-tiny"></div>
+                <div class="margin-bottom margin-xxsmall"></div>
+                <div class="margin-bottom margin-xsmall"></div>
+                <div class="margin-bottom margin-small"></div>
+                <div class="margin-bottom margin-medium"></div>
+                <div class="margin-bottom margin-large"></div>
+                <div class="margin-bottom margin-xlarge"></div>
+                <div class="margin-bottom margin-xxlarge"></div>
+                <div class="margin-bottom margin-huge"></div>
+                <div class="margin-bottom margin-xhuge"></div>
+                <div class="margin-bottom margin-xxhuge"></div>
+                <div class="margin-bottom margin-custom1"></div>
+                <div class="margin-bottom margin-custom2"></div>
+                <div class="margin-bottom margin-custom3"></div>
+              </div>
+              <div class="stylesystem_margin-left">
+                <div class="margin-left"></div>
+                <div class="margin-left margin-0"></div>
+                <div class="margin-left margin-tiny"></div>
+                <div class="margin-left margin-xxsmall"></div>
+                <div class="margin-left margin-xsmall"></div>
+                <div class="margin-left margin-small"></div>
+                <div class="margin-left margin-medium"></div>
+                <div class="margin-left margin-large"></div>
+                <div class="margin-left margin-xlarge"></div>
+                <div class="margin-left margin-xxlarge"></div>
+                <div class="margin-left margin-huge"></div>
+                <div class="margin-left margin-xhuge"></div>
+                <div class="margin-left margin-xxhuge"></div>
+                <div class="margin-left margin-custom1"></div>
+                <div class="margin-left margin-custom2"></div>
+                <div class="margin-left margin-custom3"></div>
+              </div>
+              <div class="stylesystem_margin-right">
+                <div class="margin-right"></div>
+                <div class="margin-right margin-0"></div>
+                <div class="margin-right margin-tiny"></div>
+                <div class="margin-right margin-xxsmall"></div>
+                <div class="margin-right margin-xsmall"></div>
+                <div class="margin-right margin-small"></div>
+                <div class="margin-right margin-medium"></div>
+                <div class="margin-right margin-large"></div>
+                <div class="margin-right margin-xlarge"></div>
+                <div class="margin-right margin-xxlarge"></div>
+                <div class="margin-right margin-huge"></div>
+                <div class="margin-right margin-xhuge"></div>
+                <div class="margin-right margin-xxhuge"></div>
+                <div class="margin-right margin-custom1"></div>
+                <div class="margin-right margin-custom2"></div>
+                <div class="margin-right margin-custom3"></div>
+              </div>
+              <div class="stylesystem_margin-vertical">
+                <div class="margin-vertical"></div>
+                <div class="margin-vertical margin-0"></div>
+                <div class="margin-vertical margin-tiny"></div>
+                <div class="margin-vertical margin-xxsmall"></div>
+                <div class="margin-vertical margin-xsmall"></div>
+                <div class="margin-vertical margin-small"></div>
+                <div class="margin-vertical margin-medium"></div>
+                <div class="margin-vertical margin-large"></div>
+                <div class="margin-vertical margin-xlarge"></div>
+                <div class="margin-vertical margin-xxlarge"></div>
+                <div class="margin-vertical margin-huge"></div>
+                <div class="margin-vertical margin-xhuge"></div>
+                <div class="margin-vertical margin-xxhuge"></div>
+                <div class="margin-vertical margin-custom1"></div>
+                <div class="margin-vertical margin-custom2"></div>
+                <div class="margin-vertical margin-custom3"></div>
+              </div>
+              <div class="stylesystem_margin-horizontal">
+                <div class="margin-horizontal"></div>
+                <div class="margin-horizontal margin-0"></div>
+                <div class="margin-horizontal margin-tiny"></div>
+                <div class="margin-horizontal margin-xxsmall"></div>
+                <div class="margin-horizontal margin-xsmall"></div>
+                <div class="margin-horizontal margin-small"></div>
+                <div class="margin-horizontal margin-medium"></div>
+                <div class="margin-horizontal margin-large"></div>
+                <div class="margin-horizontal margin-xlarge"></div>
+                <div class="margin-horizontal margin-xxlarge"></div>
+                <div class="margin-horizontal margin-huge"></div>
+                <div class="margin-horizontal margin-xhuge"></div>
+                <div class="margin-horizontal margin-xxhuge"></div>
+                <div class="margin-horizontal margin-custom1"></div>
+                <div class="margin-horizontal margin-custom2"></div>
+                <div class="margin-horizontal margin-custom3"></div>
+              </div>
+            </div>
+            <div class="stylesystem_padding-directions">
+              <div class="stylesystem_padding-top">
+                <div class="padding-top"></div>
+                <div class="padding-top padding-0"></div>
+                <div class="padding-top padding-tiny"></div>
+                <div class="padding-top padding-xxsmall"></div>
+                <div class="padding-top padding-xsmall"></div>
+                <div class="padding-top padding-small"></div>
+                <div class="padding-top padding-medium"></div>
+                <div class="padding-top padding-large"></div>
+                <div class="padding-top padding-xlarge"></div>
+                <div class="padding-top padding-xxlarge"></div>
+                <div class="padding-top padding-huge"></div>
+                <div class="padding-top padding-xhuge"></div>
+                <div class="padding-top padding-xxhuge"></div>
+                <div class="padding-top padding-custom1"></div>
+                <div class="padding-top padding-custom2"></div>
+                <div class="padding-top padding-custom3"></div>
+              </div>
+              <div class="stylesystem_padding-bottom">
+                <div class="padding-bottom"></div>
+                <div class="padding-bottom padding-0"></div>
+                <div class="padding-bottom padding-tiny"></div>
+                <div class="padding-bottom padding-xxsmall"></div>
+                <div class="padding-bottom padding-xsmall"></div>
+                <div class="padding-bottom padding-small"></div>
+                <div class="padding-bottom padding-medium"></div>
+                <div class="padding-bottom padding-large"></div>
+                <div class="padding-bottom padding-xlarge"></div>
+                <div class="padding-bottom padding-xxlarge"></div>
+                <div class="padding-bottom padding-huge"></div>
+                <div class="padding-bottom padding-xhuge"></div>
+                <div class="padding-bottom padding-xxhuge"></div>
+                <div class="padding-bottom padding-custom1"></div>
+                <div class="padding-bottom padding-custom2"></div>
+                <div class="padding-bottom padding-custom3"></div>
+              </div>
+              <div class="stylesystem_padding-left">
+                <div class="padding-left"></div>
+                <div class="padding-left padding-0"></div>
+                <div class="padding-left padding-tiny"></div>
+                <div class="padding-left padding-xxsmall"></div>
+                <div class="padding-left padding-xsmall"></div>
+                <div class="padding-left padding-small"></div>
+                <div class="padding-left padding-medium"></div>
+                <div class="padding-left padding-large"></div>
+                <div class="padding-left padding-xlarge"></div>
+                <div class="padding-left padding-xxlarge"></div>
+                <div class="padding-left padding-huge"></div>
+                <div class="padding-left padding-xhuge"></div>
+                <div class="padding-left padding-xxhuge"></div>
+                <div class="padding-left padding-custom1"></div>
+                <div class="padding-left padding-custom2"></div>
+                <div class="padding-left padding-custom3"></div>
+              </div>
+              <div class="stylesystem_padding-right">
+                <div class="padding-right"></div>
+                <div class="padding-right padding-0"></div>
+                <div class="padding-right padding-tiny"></div>
+                <div class="padding-right padding-xxsmall"></div>
+                <div class="padding-right padding-xsmall"></div>
+                <div class="padding-right padding-small"></div>
+                <div class="padding-right padding-medium"></div>
+                <div class="padding-right padding-large"></div>
+                <div class="padding-right padding-xlarge"></div>
+                <div class="padding-right padding-xxlarge"></div>
+                <div class="padding-right padding-huge"></div>
+                <div class="padding-right padding-xhuge"></div>
+                <div class="padding-right padding-xxhuge"></div>
+                <div class="padding-right padding-custom1"></div>
+                <div class="padding-right padding-custom2"></div>
+                <div class="padding-right padding-custom3"></div>
+              </div>
+              <div class="stylesystem_padding-vertical">
+                <div class="padding-vertical"></div>
+                <div class="padding-vertical padding-0"></div>
+                <div class="padding-vertical padding-tiny"></div>
+                <div class="padding-vertical padding-xxsmall"></div>
+                <div class="padding-vertical padding-xsmall"></div>
+                <div class="padding-vertical padding-small"></div>
+                <div class="padding-vertical padding-medium"></div>
+                <div class="padding-vertical padding-large"></div>
+                <div class="padding-vertical padding-xlarge"></div>
+                <div class="padding-vertical padding-xxlarge"></div>
+                <div class="padding-vertical padding-huge"></div>
+                <div class="padding-vertical padding-xhuge"></div>
+                <div class="padding-vertical padding-xxhuge"></div>
+                <div class="padding-vertical padding-custom1"></div>
+                <div class="padding-vertical padding-custom2"></div>
+                <div class="padding-vertical padding-custom3"></div>
+              </div>
+              <div class="stylesystem_padding-horizontal">
+                <div class="padding-horizontal"></div>
+                <div class="padding-horizontal padding-0"></div>
+                <div class="padding-horizontal padding-tiny"></div>
+                <div class="padding-horizontal padding-xxsmall"></div>
+                <div class="padding-horizontal padding-xsmall"></div>
+                <div class="padding-horizontal padding-small"></div>
+                <div class="padding-horizontal padding-medium"></div>
+                <div class="padding-horizontal padding-large"></div>
+                <div class="padding-horizontal padding-xlarge"></div>
+                <div class="padding-horizontal padding-xxlarge"></div>
+                <div class="padding-horizontal padding-huge"></div>
+                <div class="padding-horizontal padding-xhuge"></div>
+                <div class="padding-horizontal padding-xxhuge"></div>
+                <div class="padding-horizontal padding-custom1"></div>
+                <div class="padding-horizontal padding-custom2"></div>
+                <div class="padding-horizontal padding-custom3"></div>
+              </div>
+            </div>
+            <div class="stylesystem_responsiveness">
+              <div class="hide"></div>
+              <div class="hide-tablet"></div>
+              <div class="hide-mobile-landscape"></div>
+              <div class="hide-mobile-portrait"></div>
+              <div class="show"></div>
+              <div class="show-tablet"></div>
+              <div class="show-mobile-landscape"></div>
+              <div class="show-mobile-portrait"></div>
+            </div>
+            <div class="stylesystem_utility">
+              <div class="spacing-clean"></div>
+              <div class="z-index-1"></div>
+              <div class="z-index-2"></div>
+              <div class="align-center"></div>
+              <div class="div-square"></div>
+              <div class="clickable-off">
+                <div class="layer"></div>
+              </div>
+              <div class="clickable-on"></div>
+              <div class="overflow-hidden"></div>
+              <div class="overflow-scroll"></div>
+              <div class="overflow-auto"></div>
+              <div class="margin-top-auto"></div>
+            </div>
+            <div class="stylesystem_symbols">
+              <div class="global-styles w-embed">
+                <style>
+/* Snippet gets rid of top margin on first element in any rich text*/
+.w-richtext>:first-child {
+	margin-top: 0;
+}
+/* Snippet gets rid of bottom margin on last element in any rich text*/
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0;
+}
+/* Snippet makes all link elements listed below to inherit color from their parent */
+a, 
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link
+{
+color: inherit;
+}
+/* Snippet prevents all click and hover interaction with an element */
+.clickable-off {
+  pointer-events: none;
+}
+/* Snippet enables all click and hover interaction with an element */
+.clickable-on{
+  pointer-events: auto;
+}
+/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+.div-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+/*Hide focus outline for main content element*/
+    main:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/* Make sure containers never lose their center alignment*/
+.container-medium, .container-small, .container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+/*Reset selects, buttons, and links styles*/
+.w-input, .w-select, a {
+color: inherit;
+text-decoration: inherit;
+font-size: inherit;
+}
+/*Apply "..." after 3 lines of text */
+.text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+}
+</style>
+              </div>
+            </div>
+          </div>
+          <div class="rl-styleguide_extension">
+            <div class="rl-styleguide_wrapper">
+              <div class="rl-styleguide_heading">Additional Classes from latest style guide update (v1.2)</div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Letter Spacings</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa051f8-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa051f9-31379dbb" class="rl-styleguide_class-label">text-letterspacing-xwide</div>
+                  <div class="text-letterspacing-xwide">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa051fd-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa051fe-31379dbb" class="rl-styleguide_class-label">text-letterspacing-wide</div>
+                  <div class="text-letterspacing-wide">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05202-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05203-31379dbb" class="rl-styleguide_class-label">text-letterspacing-normal</div>
+                  <div class="text-letterspacing-normal">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05207-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05208-31379dbb" class="rl-styleguide_class-label">text-letterspacing-tight</div>
+                  <div class="text-letterspacing-tight">A Lorem ipsum dolor sit amet</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0520c-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0520d-31379dbb" class="rl-styleguide_class-label">text-letterspacing-xtight</div>
+                  <div class="text-letterspacing-xtight">A Lorem ipsum dolor sit amet</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Line Heights</div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05214-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05215-31379dbb" class="rl-styleguide_class-label">text-lineheight-xtall</div>
+                  <div class="text-lineheight-xtall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05219-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0521a-31379dbb" class="rl-styleguide_class-label">text-lineheight-tall</div>
+                  <div class="text-lineheight-tall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0521e-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0521f-31379dbb" class="rl-styleguide_class-label">text-lineheight-normal</div>
+                  <div class="text-lineheight-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05223-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05224-31379dbb" class="rl-styleguide_class-label">text-lineheight-short</div>
+                  <div class="text-lineheight-short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05228-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05229-31379dbb" class="rl-styleguide_class-label">text-lineheight-xshort</div>
+                  <div class="text-lineheight-xshort">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0522d-31379dbb" class="w-layout-grid rl-styleguide_class-sample-wrapper">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0522e-31379dbb" class="rl-styleguide_class-label">text-lineheight-none</div>
+                  <div class="text-lineheight-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Color Samples<br><span class="text-size-small">Used to create color swatches</span></div>
+                <a href="http://library.relume.io/color-palettes" target="_blank" class="rl-styleguide_callout-link w-inline-block">
+                  <div class="rl-styleguide_callout-link-wrapper">
+                    <div>Add pre-made Color Samples<br><span class="text-size-small">Get access to pre-made Color Samples and paste them below.</span></div>
+                    <div class="button-link with-icon">
+                      <div>View Color Samples</div>
+                      <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                </a>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05243-31379dbb" class="rl-styleguide_paste-text">Click and paste Color Palette</div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Background Color</div>
+                <a href="http://library.relume.io/color-palettes" target="_blank" class="rl-styleguide_callout-link w-inline-block">
+                  <div class="rl-styleguide_callout-link-wrapper">
+                    <div>Add pre-made Background Colors<br><span class="text-size-small">Get access to pre-made Color Palettes and paste them below.</span></div>
+                    <div class="button-link">
+                      <div>View Background Colors</div>
+                      <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                </a>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05253-31379dbb" class="rl-styleguide_paste-text">Click and paste Color Palette</div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Text Colors</div>
+                <a href="http://library.relume.io/color-palettes" target="_blank" class="rl-styleguide_callout-link w-inline-block">
+                  <div class="rl-styleguide_callout-link-wrapper">
+                    <div>Add pre-made Text Colors<br><span class="text-size-small">Get access to pre-made Text Colors and paste them below.</span></div>
+                    <div class="button-link with-icon">
+                      <div>View Text Colors</div>
+                      <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                </a>
+                <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05263-31379dbb" class="rl-styleguide_paste-text">Click and paste Color Palette</div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Box Shadows<br>‍<span class="text-size-small">Shadows allow you to add depth and realism to designs by positioning elements on a z-axis.</span></div>
+                <div class="w-layout-grid rl-styleguide_shadows-list">
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0526d-31379dbb" class="shadow-xxsmall">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0526e-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xxsmall</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05271-31379dbb" class="shadow-xsmall">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05272-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xsmall</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05275-31379dbb" class="shadow-small">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05276-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-small</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05279-31379dbb" class="shadow-medium">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0527a-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-medium</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0527d-31379dbb" class="shadow-large">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa0527e-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-large</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05281-31379dbb" class="shadow-xlarge">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05282-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xlarge</div>
+                    </div>
+                  </div>
+                  <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05285-31379dbb" class="shadow-xxlarge">
+                    <div id="w-node-c8a8b0ec-a036-368a-d976-e9490fa05286-31379dbb" class="rl-styleguide_shadow-wrapper">
+                      <div class="rl-styleguide_class-label">shadow-xxlarge</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid rl-styleguide_list">
+                <div class="rl-styleguide_subheading">Icons (HTML Embed)<br><span class="text-size-small">HTML embed icons enable you to control icon color on hover.</span><br></div>
+                <div class="styleguide_icons-list">
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xxsmall</p>
+                    </div>
+                    <div class="icon-embed-xxsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xsmall</p>
+                    </div>
+                    <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-small</p>
+                    </div>
+                    <div class="icon-embed-small w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-medium</p>
+                    </div>
+                    <div class="icon-embed-medium w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-large</p>
+                    </div>
+                    <div class="icon-embed-large w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-xlarge</p>
+                    </div>
+                    <div class="icon-embed-xlarge w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <div>
+                    <div class="margin-bottom margin-tiny">
+                      <p class="rl-styleguide_class-label">icon-embed-custom</p>
+                    </div>
+                    <div class="icon-embed-custom w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-large">
+            <div class="rl-styleguide_heading">Splide Styling</div>
+            <div class="splide">
+              <div class="splide__arrows">
+                <a href="#" class="splide__arrow splide__arrow--prev w-inline-block">
+                  <div class="w-embed"><svg width="100%" viewbox="0 0 32 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M31.333 9.60947L2.27582 9.60947L9.60915 16.9428L8.66634 17.8856L0.194937 9.41421C0.0699121 9.28919 -0.000326048 9.11962 -0.00032605 8.94281C-0.000326052 8.766 0.0699121 8.59643 0.194937 8.4714L8.66634 2.70297e-07L9.60915 0.942809L2.27582 8.27614L31.333 8.27614L31.333 9.60947Z" fill="currentColor"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="splide__arrow splide__arrow--next w-inline-block">
+                  <div class="w-embed"><svg width="100%" viewbox="0 0 32 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M-4.20043e-07 8.27609L29.0572 8.27608L21.7239 0.94275L22.6667 -5.82113e-05L31.1381 8.47135C31.2631 8.59637 31.3333 8.76594 31.3333 8.94275C31.3333 9.11956 31.2631 9.28913 31.1381 9.41416L22.6667 17.8856L21.7239 16.9427L29.0572 9.60942L-3.61762e-07 9.60942L-4.20043e-07 8.27609Z" fill="currentColor"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6582aea2e6ccef4fb05de960" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/iltizamrelief.js" type="text/javascript"></script>
+  <script>
+const baseURL="https://backend.iltizamrelief.com";
+document.getElementById("logoutButton").addEventListener("click",function(){localStorage.removeItem("token"),window.location.href="/"});
+</script>
+</body>
+</html>
